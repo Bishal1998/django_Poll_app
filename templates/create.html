@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Create Poll{% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Create A New Poll</h3>
+            </div>
+
+            <form method="POST">
+            {% csrf_token %}
+                {{ form}}
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
